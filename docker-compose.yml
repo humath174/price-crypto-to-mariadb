@@ -1,0 +1,12 @@
+version: '3'
+services:
+  crypto_collector:
+    build: .
+    container_name: crypto_data_collector
+    restart: always
+    environment:
+      - MYSQL_HOST=10.0.0.12
+      - MYSQL_PORT=3306
+      - MYSQL_USER=grafana
+      - MYSQL_PASSWORD=grafana
+      - MYSQL_DB=grafana
